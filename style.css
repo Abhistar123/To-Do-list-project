@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #505e79, #b471c5);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+   border-radius: 20px;
+}
+.todo-app h1 img{
+    width: 50px;
+    height: auto;
+}
+.todo-app h1 {
+    display: flex;            /* Puts text and image side by side */
+    align-items: center;      /* Vertically center text and image */
+    gap: 10px;                /* Optional: space between text and image */
+    font-size: 24px;          /* Example font size */
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-bottom: 25px; /* outside of border create space */
+
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    padding: 16px 30px; /* element ke charo traf 10px ka gap "inside border" */
+    border-radius: 30px;
+    color: #fff;  /* text color lagane ke liye */
+    background-color: #05d250 ;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;  /* mouse pr arrow ka sign hatakr hath ka nisan aayega jab button pr click krenge */
+}
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none; /* text of elements can be selected */
+    position: relative;
+}
+/* pseudo elements in css */
+ul li::before{
+    content: '';
+    position: absolute;  /*ensures the element's position is the same even if the page is resized or the content is changed. */
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    height: 28px;
+    width: 28px;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+     background-image: url(images/images.png);
+}
+ul li span{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+
+}
