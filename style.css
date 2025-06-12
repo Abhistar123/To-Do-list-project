@@ -50,9 +50,9 @@ button{
     padding: 16px 30px; /* element ke charo traf 10px ka gap "inside border" */
     border-radius: 30px;
     color: #fff;  /* text color lagane ke liye */
-    background-color: #05d250 ;
+    background-color: #09579f ;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;  /* mouse pr arrow ka sign hatakr hath ka nisan aayega jab button pr click krenge */
 }
 ul li {
@@ -98,3 +98,41 @@ ul li span:hover{
     background: #edeef0;
 
 }
+
+/* adding new edit functionality then adding to css to maintain postion of edit button */
+
+
+ul li .edit-btn {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ul li .edit-btn:hover {
+    background: #edeef0;
+}
+
+ul li .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ul li .delete-btn:hover {
+    background: #edeef0;
+}
+
